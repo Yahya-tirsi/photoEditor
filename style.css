@@ -1,0 +1,208 @@
+:root{
+    --primary: #1d2023;
+    --secend: #383a3e;
+}
+*{
+    font-family: sans-serif;
+}
+body{
+    background-color: #0a0f20;
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);    background-repeat: no-repeat;
+    color: #fff;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);    
+    border-radius: 10px;
+    border: 1px solid #0099cc99;
+}
+
+
+.content{
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);    
+    border-radius: 20px;
+    position: relative;
+    background-color: var(--secend);
+    border-radius: 10px;
+    border: 1px solid #0099cc99;
+    box-shadow: 0px 0px 10px  #0099cc99;
+    height: 80vh;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+.filters{
+    width: 30%;
+    z-index: 90;
+    position: relative;
+}
+.filters input{
+    margin: 0.5rem 0;
+    width: 100%;
+    display: block;
+}
+.filters label{
+    color: white;
+}
+/* image */
+.image{
+    position: relative;
+    padding: 1rem;
+    width: 50%;
+    height: 70vh;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.img{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    border: 2px dotted #0099cc99;
+    transition: 0.3s;
+}
+.img img,canvas{
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    z-index: 77;
+    left: 0;
+}
+.retate{
+    transform: rotate(180deg);
+}
+.img:hover{
+    border: 2px dashed #00a3da;
+}
+.upwold input{
+    display: none;
+}
+.upwold{
+    margin-bottom: 0.5rem;
+}
+.upwold label{
+    background-color: #09c;
+    color: white;
+    font-size: 18px;
+    padding: 0.6rem 3rem;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    margin-bottom: 3rem;
+    cursor: pointer;
+}
+.upwold label:hover{
+    background-color: #0099cc99;
+    box-shadow: 0px 0px 10px #0099cc99;
+}
+
+/* button dowload */
+.download a,button{
+    background-color: #09c;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0.6rem 4rem;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.download button{
+    border: none;
+}
+.download a:active,.download button:active{
+    transform: translate(0px,5px);
+}
+.download a:hover, .download button:hover{
+    background-color: #0099cc99;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #0099cc99;
+}
+
+/* icone */
+.fa-solid{
+    z-index: 1;
+    color: gray;
+    position: absolute;
+    font-size: 50px;
+    top: 43%;
+    left: 45%;
+}
+.fa-solid:hover{
+    color: #00a3da;
+}
+
+
+
+@media screen and (max-width: 1254px){
+    .content{
+        margin: auto;
+        display: block;
+        height: 1100px;
+    }
+    .filters{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .image{
+        position: static;
+        margin: 0.5rem auto;
+        width: 90%;
+    }
+    #search,#upllouad,#dow,#res,.ret{
+        display: none;
+    }
+}
+
+/* retate button */
+#retate{
+    position: absolute;
+    padding: 0.5rem;
+    width: 8%;
+    height: 30px;
+    top: 46px;
+    left: -25px;
+    border: none;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 50px;
+    display: none;
+}
+#retate:hover{
+    box-shadow: 0px 0px 10px #09c;
+    cursor: pointer;
+}
+#retate:active{
+    transform: translate(-5px,0px);
+}
+/* decoration icon */
+#search,#upllouad,#dow{
+    transition: 0.5s;
+}
+#search:active{
+    transform: rotate(160deg);
+}
+#upllouad:active{
+    transform: translate(0px,-5px);
+}
+#dow:active{
+    transform: translate(0px,5px);
+}
+#res:active{
+    animation: reset 2s;
+}
+@keyframes reset {
+    0%{transform: translate(-10px,0px);}
+    50%{transform: translate(5px,0px);}
+    75%{transform: translate(10px,0px);}
+    100%{transform: translate(0px,0px);}
+}
+

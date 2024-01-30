@@ -1,0 +1,93 @@
+body{
+    background-color: #0a0f20;
+    background-image: radial-gradient(ellipse 40% 100% at 60% -10%,rgba(119,138,232,.3),rgba(119,138,232,0));
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    margin: 0 auto;
+    text-align: center;
+}
+h1{
+    font-family: "Montserrat","Segoe UI",sans-serif;
+    color: lightslategray;
+}
+h1 strong{
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(141deg,#9c26d7,#1eb1db);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: "Montserrat","Segoe UI",sans-serif;
+    background-size: cover;
+    display: block;
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 7rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -webkit-touch-callout: none!important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    overscroll-behavior-x: none;
+    touch-action: manipulation;
+    vertical-align: top;
+}
+
+.button{
+    background: rgba(0,0,0,.22);
+    border: none;
+    border: 1px solid rgba(150,92,201,.342);
+    color: #ffffffcc;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: "Montserrat","Segoe UI",sans-serif;
+    height: 55px;
+    padding: 0 40px;
+    border-radius: 50px;
+    min-height: 40px;
+    text-transform: none;
+    transition: 0.5s;
+}
+
+.button{
+    align-items: center;
+    gap: 10px;
+    transition: 0.5s;
+    animation: title 3s infinite linear;
+}
+.button:hover{
+    background-color: #0a0f20;
+    box-shadow: 0 0px 10px rgba(0, 50, 120, 200), 
+              0 0px 10px rgba(1, 20, 100, 180),
+              0 0px 4px rgba(0, 30, 70, 150),
+              0 0px 5px rgba(220, 350, 50, 0);
+    background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+    background-repeat: no-repeat;
+    color: #fff;
+    cursor: pointer;
+    animation: none;
+}
+.button:active{
+    transform: translate(0px,10px);
+}
+@keyframes title {
+    0%{transform: translate(0px,0px);}
+    25%{transform: translate(10px,0px);}
+    50%{transform: translate(10px,10px);}
+    75%{transform: translate(-10px,10px);}
+    100%{transform: translate(0px,0px);}
+}

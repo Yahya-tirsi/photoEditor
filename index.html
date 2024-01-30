@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Photo-editor</title>
+</head>
+<body>
+
+    <div class="content">
+        <div class="filters">
+            <label for="Grayscal">Grayscal</label>
+            <input type="range" name="" id="Grayscal" min="0" max="1" step="0.1" value="0">
+            <label for="Contrast">Contrast</label>
+            <input type="range" name="" id="Contrast" min="0" max="200" value="100">
+            <label for="Blur">Blur</label>
+            <input type="range" name="" id="Blur" min="0" max="10" step="0.1" value="0">
+            <label for="Brightness">Brightness</label>
+            <input type="range" name="" id="Brightness" min="0" max="200" value="100">
+            <label for="Invert">Invert</label>
+            <input type="range" name="" id="Invert" min="0" max="1" step="0.1" value="0">
+            <label for="hue-retate">Hue retate</label>
+            <input type="range" name="" id="hue-retate" min="0" max="350" value="0">
+            <label for="Sturate">Sturate</label>
+            <input type="range" name="" id="Sturate" min="0" max="200" value="100">
+            <label for="Sepia">Sepia</label>
+            <input type="range" name="" id="Sepia" min="0" max="200" value="0">
+        </div>
+        <div class="image">
+            <div class="ret">
+                <button id="retate"><i id="search" style="font-size: 20px; color: white;position: absolute; top: 5px; left: 5px;" class="fa-solid fa-rotate-right"></i></button>
+            </div>
+            <div class="upwold">
+                <label for="up"><i id="upllouad" style="color: white; position: absolute; top: 15px;left: 180px; font-size: 20px;" class="fa-solid fa-upload"></i> Upload Photo</label>
+                <input type="file" id="up">
+            </div>
+            <div class="img">
+                <img id="imge">
+                <canvas id="canvas"></canvas>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="download">
+                <button style="position: relative;" onclick="newPicture()" id="reset"><i id="res" style="color: white; font-size: 20px;position: absolute;top: 9px;left: 30px;" class="fa-solid fa-eraser"></i> Reset</button>
+                <a style="position: relative;" href="" download="image" id="download"><i id="dow" style="color: white; font-size: 20px;position: absolute;top: 7px;left: 30px;" class="fa-solid fa-download"></i> Download</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
